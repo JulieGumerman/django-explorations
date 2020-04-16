@@ -8,12 +8,7 @@
     </p>
 
 {% endif %}
-<!-- <ul>
-    {% for choice in question.choice_set.all %}
-    <li>{{ choice.choice_text }}</li>
-    {% endfor %}
 
-</ul> -->
 <form action="{% url 'polls:vote' question.id %}" method="post">
     {% csrf_token %}
     {% for choice in question.choice_set.all %}
